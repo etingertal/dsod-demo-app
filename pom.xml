@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	
+	<groupId>io.github.anantharajuc</groupId>
+	<artifactId>spring-boot-minimal-web-app</artifactId>
+	<version>latest</version>
+	<packaging>jar</packaging>
+	
+	<name>Spring-Boot-Minimal-Web-App</name>
+	<url>https://github.com/Spring-Boot-Framework/Spring-Boot-Minimal-Web-App</url>
+	<description>Spring Boot Minimal Web Application</description>
+	
+	<!-- Start - Spring-Boot-Minimal-Web-App Project Owner -->
+	<developers>
+		<developer>
+			<name>Anantha Raju C</name>
+			<email>arcswdev@gmail.com</email>
+			<timezone>UTC+05:30</timezone>
+		</developer>
+	</developers>
+	<!-- End - Spring-Boot-Minimal-Web-App Project Owner -->
+	
+	<!-- Start - Spring-Boot-Minimal-Web-App source repository -->
+    <scm>
+        <connection>https://github.com/Spring-Boot-Framework/Spring-Boot-Minimal-Web-App.git</connection>
+        <developerConnection>git@github.com:Spring-Boot-Framework/Spring-Boot-Minimal-Web-App.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+    <!-- End - Spring-Boot-Minimal-Web-App source repository -->
+    
+    <!-- Start - Spring-Boot-Minimal-Web-App issue management -->
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/Spring-Boot-Framework/Spring-Boot-Minimal-Web-App/issues</url>
+    </issueManagement>
+    <!-- End - Spring-Boot-Minimal-Web-App issue management -->
+
+	<properties>
+		<!--  Dependencies versions properties  -->
+		<java.version>1.8</java.version>
+		
+		<springdoc-openapi-ui.version>1.5.12</springdoc-openapi-ui.version>
+		<swagger-annotations.version>1.6.3</swagger-annotations.version>
+		<modelmapper.version>2.4.4</modelmapper.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.atteo</groupId>
+		    <artifactId>evo-inflector</artifactId>
+		    <version>1.3</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-engine</artifactId>
+		    <scope>test</scope>
+		</dependency>
+
+		<!-- Start - POJO creation made easy -->
+		<dependency>
+	      <groupId>org.projectlombok</groupId>
+	      <artifactId>lombok</artifactId>
+	      <optional>true</optional>
+	    </dependency>
+	    <!-- End - POJO creation made easy -->
+	    
+	    <!-- Start - Database migration dependencies -->
+		<dependency>
+	      <groupId>org.flywaydb</groupId>
+	      <artifactId>flyway-core</artifactId>
+	    </dependency>
+		<!-- End - Database migration dependencies -->	
+		
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>	
+		<!-- Start - Database driver for mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- End - Database driver for mysql -->
+		<dependency>
+		    <groupId>io.github.cdimascio</groupId>
+		    <artifactId>java-dotenv</artifactId>
+		    <version>5.2.2</version>
+		</dependency>
+		
+		<!-- Start - API documentation with Swagger -->
+		<!-- Swagger UI -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>${springdoc-openapi-ui.version}</version>
+		</dependency>
+		<!-- Swagger Codegen / OpenAPI -->
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>${swagger-annotations.version}</version>
+		</dependency>
+		<!-- End - API documentation with Swagger -->
+		
+		<dependency>
+		    <groupId>org.modelmapper</groupId>
+		    <artifactId>modelmapper</artifactId>
+		    <version>${modelmapper.version}</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>net.kaczmarzyk</groupId>
+            <artifactId>specification-arg-resolver</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Package as an executable jar/war. -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!--  Plugin for building and pushing Docker image to Docker Hub. -->      	        
+	        <plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.13</version>
+				<configuration>
+					<repository>anantha/${project.artifactId}</repository>
+					<tag>${project.version}</tag>
+					<buildArgs>
+						<JAR_FILE>target/${project.artifactId}-${project.version}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>default</id>
+						<phase>install</phase>
+						<goals>
+							<goal>build</goal>
+							<goal>push</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>  	        
+		</plugins>
+	</build>
+
+</project>
