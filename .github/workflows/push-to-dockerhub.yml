@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       source_image:
-        description: "Full source image path in Artifactory (e.g. jfrogrepo24.jfrog.io/docker-repo/gel-test:1.0)"
+        description: "Full source image path in Artifactory (e.g. xxx.jfrog.io/docker-repo/gel-test:1.0)"
         required: true
       target_tag:
         description: "Tag to use on Docker Hub"
